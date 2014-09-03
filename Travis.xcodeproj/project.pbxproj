@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA44146C49045F39FC94A2E /* libPods-Travis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10194F9820D847F393103DEF /* libPods-Travis.a */; };
 		51E68A7019B6AA2200FF47B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A6F19B6AA2200FF47B1 /* Foundation.framework */; };
 		51E68A7219B6AA2200FF47B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */; };
 		51E68A7419B6AA2200FF47B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7319B6AA2200FF47B1 /* UIKit.framework */; };
@@ -25,6 +26,8 @@
 		51E68A9A19B6AA2200FF47B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7519B6AA2200FF47B1 /* CoreData.framework */; };
 		51E68AA219B6AA2200FF47B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51E68AA019B6AA2200FF47B1 /* InfoPlist.strings */; };
 		51E68AA419B6AA2200FF47B1 /* TravisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E68AA319B6AA2200FF47B1 /* TravisTests.m */; };
+		51E68AAF19B6ABB500FF47B1 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E68AAE19B6ABB500FF47B1 /* AddUserViewController.m */; };
+		51E68AB719B6ACEE00FF47B1 /* RepositoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E68AB619B6ACEE00FF47B1 /* RepositoriesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10194F9820D847F393103DEF /* libPods-Travis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E68A6C19B6AA2200FF47B1 /* Travis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E68A6F19B6AA2200FF47B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +65,11 @@
 		51E68A9F19B6AA2200FF47B1 /* TravisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TravisTests-Info.plist"; sourceTree = "<group>"; };
 		51E68AA119B6AA2200FF47B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		51E68AA319B6AA2200FF47B1 /* TravisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravisTests.m; sourceTree = "<group>"; };
+		51E68AAD19B6ABB500FF47B1 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
+		51E68AAE19B6ABB500FF47B1 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		51E68AB519B6ACEE00FF47B1 /* RepositoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesTableViewController.h; sourceTree = "<group>"; };
+		51E68AB619B6ACEE00FF47B1 /* RepositoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesTableViewController.m; sourceTree = "<group>"; };
+		FCE529FDF0894C6A838A830D /* Pods-Travis.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travis.xcconfig"; path = "Pods/Pods-Travis.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,7 @@
 				51E68A7619B6AA2200FF47B1 /* CoreData.framework in Frameworks */,
 				51E68A7419B6AA2200FF47B1 /* UIKit.framework in Frameworks */,
 				51E68A7019B6AA2200FF47B1 /* Foundation.framework in Frameworks */,
+				4FA44146C49045F39FC94A2E /* libPods-Travis.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,7 @@
 				51E68A9D19B6AA2200FF47B1 /* TravisTests */,
 				51E68A6E19B6AA2200FF47B1 /* Frameworks */,
 				51E68A6D19B6AA2200FF47B1 /* Products */,
+				FCE529FDF0894C6A838A830D /* Pods-Travis.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +127,7 @@
 				51E68A7319B6AA2200FF47B1 /* UIKit.framework */,
 				51E68A7519B6AA2200FF47B1 /* CoreData.framework */,
 				51E68A9619B6AA2200FF47B1 /* XCTest.framework */,
+				10194F9820D847F393103DEF /* libPods-Travis.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,13 +135,11 @@
 		51E68A7719B6AA2200FF47B1 /* Travis */ = {
 			isa = PBXGroup;
 			children = (
+				51E68B0219B6B5A100FF47B1 /* helper */,
+				51E68AB019B6ABBA00FF47B1 /* views */,
 				51E68A8019B6AA2200FF47B1 /* AppDelegate.h */,
 				51E68A8119B6AA2200FF47B1 /* AppDelegate.m */,
 				51E68A8319B6AA2200FF47B1 /* Main.storyboard */,
-				51E68A8919B6AA2200FF47B1 /* MasterViewController.h */,
-				51E68A8A19B6AA2200FF47B1 /* MasterViewController.m */,
-				51E68A8C19B6AA2200FF47B1 /* DetailViewController.h */,
-				51E68A8D19B6AA2200FF47B1 /* DetailViewController.m */,
 				51E68A8F19B6AA2200FF47B1 /* Images.xcassets */,
 				51E68A8619B6AA2200FF47B1 /* Travis.xcdatamodeld */,
 				51E68A7819B6AA2200FF47B1 /* Supporting Files */,
@@ -166,6 +176,60 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		51E68AB019B6ABBA00FF47B1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				51E68AB319B6ABD000FF47B1 /* users */,
+				51E68AB419B6ABDC00FF47B1 /* repositories */,
+				51E68AB219B6ABC900FF47B1 /* detail */,
+				51E68AB119B6ABC300FF47B1 /* add */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		51E68AB119B6ABC300FF47B1 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				51E68AAD19B6ABB500FF47B1 /* AddUserViewController.h */,
+				51E68AAE19B6ABB500FF47B1 /* AddUserViewController.m */,
+			);
+			name = add;
+			sourceTree = "<group>";
+		};
+		51E68AB219B6ABC900FF47B1 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				51E68A8C19B6AA2200FF47B1 /* DetailViewController.h */,
+				51E68A8D19B6AA2200FF47B1 /* DetailViewController.m */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
+		51E68AB319B6ABD000FF47B1 /* users */ = {
+			isa = PBXGroup;
+			children = (
+				51E68A8919B6AA2200FF47B1 /* MasterViewController.h */,
+				51E68A8A19B6AA2200FF47B1 /* MasterViewController.m */,
+			);
+			name = users;
+			sourceTree = "<group>";
+		};
+		51E68AB419B6ABDC00FF47B1 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				51E68AB519B6ACEE00FF47B1 /* RepositoriesTableViewController.h */,
+				51E68AB619B6ACEE00FF47B1 /* RepositoriesTableViewController.m */,
+			);
+			name = repositories;
+			sourceTree = "<group>";
+		};
+		51E68B0219B6B5A100FF47B1 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51E68AA719B6AA2200FF47B1 /* Build configuration list for PBXNativeTarget "Travis" */;
 			buildPhases = (
+				7B8E73EE939549578A708BA7 /* Check Pods Manifest.lock */,
 				51E68A6819B6AA2200FF47B1 /* Sources */,
 				51E68A6919B6AA2200FF47B1 /* Frameworks */,
 				51E68A6A19B6AA2200FF47B1 /* Resources */,
+				79A96B1DEAE74FEA96612126 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +295,8 @@
 			mainGroup = 51E68A6319B6AA2200FF47B1;
 			productRefGroup = 51E68A6D19B6AA2200FF47B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				51E68A6B19B6AA2200FF47B1 /* Travis */,
@@ -258,6 +326,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79A96B1DEAE74FEA96612126 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Travis-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B8E73EE939549578A708BA7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51E68A6819B6AA2200FF47B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,9 +366,11 @@
 			files = (
 				51E68A8E19B6AA2200FF47B1 /* DetailViewController.m in Sources */,
 				51E68A8B19B6AA2200FF47B1 /* MasterViewController.m in Sources */,
+				51E68AB719B6ACEE00FF47B1 /* RepositoriesTableViewController.m in Sources */,
 				51E68A8219B6AA2200FF47B1 /* AppDelegate.m in Sources */,
 				51E68A7E19B6AA2200FF47B1 /* main.m in Sources */,
 				51E68A8819B6AA2200FF47B1 /* Travis.xcdatamodeld in Sources */,
+				51E68AAF19B6ABB500FF47B1 /* AddUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +492,7 @@
 		};
 		51E68AA819B6AA2200FF47B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCE529FDF0894C6A838A830D /* Pods-Travis.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -402,6 +506,7 @@
 		};
 		51E68AA919B6AA2200FF47B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCE529FDF0894C6A838A830D /* Pods-Travis.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -472,6 +577,7 @@
 				51E68AA919B6AA2200FF47B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51E68AAA19B6AA2200FF47B1 /* Build configuration list for PBXNativeTarget "TravisTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +586,7 @@
 				51E68AAC19B6AA2200FF47B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

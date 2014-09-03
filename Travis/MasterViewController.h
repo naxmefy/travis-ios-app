@@ -10,7 +10,9 @@
 
 #import <CoreData/CoreData.h>
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+#import "AddUserViewController.h"
+
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, AddUserDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
