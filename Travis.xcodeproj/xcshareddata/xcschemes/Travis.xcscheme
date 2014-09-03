@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51E689DF19B69E2D00FF47B1"
+               BlueprintIdentifier = "51E68A6B19B6AA2200FF47B1"
                BuildableName = "Travis.app"
                BlueprintName = "Travis"
                ReferencedContainer = "container:Travis.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "51E689FA19B69E2D00FF47B1"
+               BlueprintIdentifier = "51E68A9419B6AA2200FF47B1"
                BuildableName = "TravisTests.xctest"
                BlueprintName = "TravisTests"
                ReferencedContainer = "container:Travis.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51E689DF19B69E2D00FF47B1"
+            BlueprintIdentifier = "51E68A6B19B6AA2200FF47B1"
             BuildableName = "Travis.app"
             BlueprintName = "Travis"
             ReferencedContainer = "container:Travis.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51E689DF19B69E2D00FF47B1"
+            BlueprintIdentifier = "51E68A6B19B6AA2200FF47B1"
             BuildableName = "Travis.app"
             BlueprintName = "Travis"
             ReferencedContainer = "container:Travis.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "51E689DF19B69E2D00FF47B1"
+            BlueprintIdentifier = "51E68A6B19B6AA2200FF47B1"
             BuildableName = "Travis.app"
             BlueprintName = "Travis"
             ReferencedContainer = "container:Travis.xcodeproj">
