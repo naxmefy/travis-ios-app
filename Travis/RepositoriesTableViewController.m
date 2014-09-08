@@ -83,7 +83,9 @@
     if (repo[@"last_build_status"] == [NSNull null]) {
         status = @"Error";
     } else {
-        if (repo[@"last_build_result"] != [NSNull null]) {
+        if (repo[@"last_build_result"] == [NSNull null]) {
+            status = @"Error";
+        } else {
             if ([repo[@"last_build_result"] intValue] == 0) {
                 status = @"Success";
             } else {

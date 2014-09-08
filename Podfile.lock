@@ -1,10 +1,64 @@
 PODS:
+  - AFNetworking (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AuthKit (0.4.0):
+    - AuthKit/Core
+    - AuthKit/Crashlytics
+    - AuthKit/GitHub
+  - AuthKit/Core (0.4.0):
+    - AFNetworking (~> 2.0)
+    - JSONModel
+  - AuthKit/Crashlytics (0.4.0):
+    - AuthKit/Core
+  - AuthKit/GitHub (0.4.0):
+    - AuthKit/Core
+  - JSONModel (1.0.1)
+  - libPusher (1.5):
+    - libPusher/Core
+  - libPusher/Core (1.5):
+    - SocketRocket (= 0.3.1-beta2)
   - MBProgressHUD (0.9)
+  - SocketRocket (0.3.1-beta2)
+  - TravisKit (1.0.1):
+    - TravisKit/Log
+    - TravisKit/Model
+  - TravisKit/Log (1.0.1):
+    - libPusher
+  - TravisKit/Model (1.0.1):
+    - AFNetworking (~> 2.0)
+    - JSONModel
 
 DEPENDENCIES:
+  - AuthKit
   - MBProgressHUD (~> 0.9)
+  - TravisKit (~> 1.0)
 
 SPEC CHECKSUMS:
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  AuthKit: a6cc5fbcf590eb16029fc9cd4acbeb2e3852c1d2
+  JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
+  libPusher: 583326327a72ab7cd0f38692f61f9061cf4be3d9
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
+  TravisKit: 68d93f8f3a8108a7d3023994622f9427a4920c32
 
 COCOAPODS: 0.33.1

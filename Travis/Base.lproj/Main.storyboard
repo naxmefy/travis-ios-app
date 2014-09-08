@@ -159,7 +159,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="v4W-mA-rzl">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="um7-Et-rqo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="um7-Et-rqo">
                             <connections>
                                 <action selector="save:" destination="qqb-w2-dBt" id="Yhs-yy-Tdc"/>
                             </connections>
