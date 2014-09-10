@@ -10,3 +10,6 @@ Pods/
 
 .idea/
 
+# APIKeys file
+Travis/APIKeys.h
+
