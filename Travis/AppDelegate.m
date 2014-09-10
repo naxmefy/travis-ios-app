@@ -7,8 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "APIKeys.h"
+#import "UIConstants.h"
 
 #import "MasterViewController.h"
+#import "MenuTableViewController.h"
+
+@interface AppDelegate()<PKRevealing> {
+    bool menuOpen;
+    bool friendsOpen;
+}
+
+@property (nonatomic, strong) UIStoryboard *storyboard;
+@property (nonatomic, strong, readwrite) PKRevealController *revealController;
+@property (nonatomic, strong, readwrite) UINavigationController *menuNav;
+@property (nonatomic, strong, readwrite) MenuTableViewController *menu;
+@property (nonatomic, strong, readwrite) UITabBarController *home;
+
+@end
 
 @implementation AppDelegate
 
@@ -18,10 +34,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    
+    // Github Client
+    self.githubClient = [[AKGitHubClient alloc] initWithClientID:GITHUB_CLIENT_ID
+                                                    clientSecret:GITHUB_CLIENT_SECRET
+                                                          scopes:@[ AKGitHubScopeUser, AKGitHubScopeRepo ]
+                                                            note:@"Test"];
+    
+    // Storyboard
+    self.storyboard = [UIStoryboard storyboardWithName:kIPhoneStoryboard
+                                                bundle: nil];
+    // Menu
+    self.menuNav = [self.storyboard instantiateViewControllerWithIdentifier:kMenuView];
+    self.menu = (MenuTableViewController *)self.menuNav.topViewController;
+    
+    // Home
+    self.home = [self.storyboard instantiateViewControllerWithIdentifier:kHomeView];
+    
+    // Reveal Controller
+    NSDictionary *options = @{
+                              PKRevealControllerRecognizesPanningOnFrontViewKey : @NO
+                              };
+    self.revealController = [PKRevealController revealControllerWithFrontViewController:self.home leftViewController:self.menuNav options:options];
+    
+    self.revealController.delegate = self;
+    self.revealController.animationDuration = 0.25;
+    
+    // Setup reveal status
+    menuOpen = false;
+    friendsOpen = false;
+    
+    // Setup window
+    self.window.rootViewController = self.revealController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
@@ -147,5 +192,31 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+#pragma mark - PKReveal Public Functions
+- (void)showFronView {
+    [self.revealController showViewController:self.revealController.frontViewController];
+    menuOpen = NO;
+}
+- (void)showMenu {
+    if (menuOpen) {
+        [self.revealController showViewController:self.revealController.frontViewController];
+    } else {
+        [self.revealController showViewController:self.revealController.leftViewController];
+    }
+    
+    menuOpen |= menuOpen;
+}
+
+- (void)showSettings {
+    [self.revealController setFrontViewController:[self.storyboard instantiateViewControllerWithIdentifier:kSettingsView]];
+    [self showFronView];
+}
+
+- (void)showHome {
+    [self.revealController setFrontViewController:[self.storyboard instantiateViewControllerWithIdentifier:kHomeView]];
+    [self showFronView];
+}
+
 
 @end

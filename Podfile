@@ -5,6 +5,7 @@ target "Travis" do
   pod 'MBProgressHUD', '~> 0.9'
   pod 'TravisKit', '~> 1.0'
   pod 'AuthKit', '~> 0.4'
+  pod 'PKRevealController', '~> 2.0'
 end
 
 target "TravisTests" do

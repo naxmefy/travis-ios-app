@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4FA44146C49045F39FC94A2E /* libPods-Travis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10194F9820D847F393103DEF /* libPods-Travis.a */; };
+		5169D9B019BE927D00CDEEAE /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9AF19BE927D00CDEEAE /* MenuTableViewController.m */; };
+		5169D9B419C04C6100CDEEAE /* UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9B319C04C6100CDEEAE /* UserConfig.m */; };
+		5169D9B819C04F3F00CDEEAE /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9B719C04F3F00CDEEAE /* SettingsTableViewController.m */; };
+		5169D9BD19C050B400CDEEAE /* RecentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9BC19C050B400CDEEAE /* RecentTableViewController.m */; };
+		5169D9C019C0512800CDEEAE /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9BF19C0512800CDEEAE /* MyTableViewController.m */; };
+		5169D9C619C0598A00CDEEAE /* GithubLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */; };
 		51E68A7019B6AA2200FF47B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A6F19B6AA2200FF47B1 /* Foundation.framework */; };
 		51E68A7219B6AA2200FF47B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */; };
 		51E68A7419B6AA2200FF47B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7319B6AA2200FF47B1 /* UIKit.framework */; };
@@ -42,6 +48,20 @@
 
 /* Begin PBXFileReference section */
 		10194F9820D847F393103DEF /* libPods-Travis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5169D9AE19BE927D00CDEEAE /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		5169D9AF19BE927D00CDEEAE /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		5169D9B119C034D800CDEEAE /* UIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
+		5169D9B219C04C6100CDEEAE /* UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserConfig.h; sourceTree = "<group>"; };
+		5169D9B319C04C6100CDEEAE /* UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserConfig.m; sourceTree = "<group>"; };
+		5169D9B619C04F3F00CDEEAE /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		5169D9B719C04F3F00CDEEAE /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		5169D9BB19C050B400CDEEAE /* RecentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewController.h; sourceTree = "<group>"; };
+		5169D9BC19C050B400CDEEAE /* RecentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewController.m; sourceTree = "<group>"; };
+		5169D9BE19C0512800CDEEAE /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		5169D9BF19C0512800CDEEAE /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		5169D9C219C053EC00CDEEAE /* APIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
+		5169D9C419C0598A00CDEEAE /* GithubLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubLoginViewController.h; sourceTree = "<group>"; };
+		5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubLoginViewController.m; sourceTree = "<group>"; };
 		51E68A6C19B6AA2200FF47B1 /* Travis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E68A6F19B6AA2200FF47B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +119,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5169D9AD19BE926F00CDEEAE /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9AE19BE927D00CDEEAE /* MenuTableViewController.h */,
+				5169D9AF19BE927D00CDEEAE /* MenuTableViewController.m */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		5169D9B519C04F2D00CDEEAE /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9C319C0597400CDEEAE /* github */,
+				5169D9B619C04F3F00CDEEAE /* SettingsTableViewController.h */,
+				5169D9B719C04F3F00CDEEAE /* SettingsTableViewController.m */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		5169D9B919C0509600CDEEAE /* recent */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9BB19C050B400CDEEAE /* RecentTableViewController.h */,
+				5169D9BC19C050B400CDEEAE /* RecentTableViewController.m */,
+			);
+			name = recent;
+			sourceTree = "<group>";
+		};
+		5169D9BA19C050A500CDEEAE /* my */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9BE19C0512800CDEEAE /* MyTableViewController.h */,
+				5169D9BF19C0512800CDEEAE /* MyTableViewController.m */,
+			);
+			name = my;
+			sourceTree = "<group>";
+		};
+		5169D9C119C051D200CDEEAE /* home */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9BA19C050A500CDEEAE /* my */,
+				5169D9B919C0509600CDEEAE /* recent */,
+				51E68AB319B6ABD000FF47B1 /* favourits */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		5169D9C319C0597400CDEEAE /* github */ = {
+			isa = PBXGroup;
+			children = (
+				5169D9C419C0598A00CDEEAE /* GithubLoginViewController.h */,
+				5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */,
+			);
+			name = github;
+			sourceTree = "<group>";
+		};
 		51E68A6319B6AA2200FF47B1 = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +255,9 @@
 		51E68AB019B6ABBA00FF47B1 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				51E68AB319B6ABD000FF47B1 /* users */,
-				51E68AB419B6ABDC00FF47B1 /* repositories */,
-				51E68AB219B6ABC900FF47B1 /* detail */,
-				51E68AB119B6ABC300FF47B1 /* add */,
+				5169D9AD19BE926F00CDEEAE /* menu */,
+				5169D9C119C051D200CDEEAE /* home */,
+				5169D9B519C04F2D00CDEEAE /* settings */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -205,18 +280,21 @@
 			name = detail;
 			sourceTree = "<group>";
 		};
-		51E68AB319B6ABD000FF47B1 /* users */ = {
+		51E68AB319B6ABD000FF47B1 /* favourits */ = {
 			isa = PBXGroup;
 			children = (
+				51E68AB419B6ABDC00FF47B1 /* repositories */,
+				51E68AB119B6ABC300FF47B1 /* add */,
 				51E68A8919B6AA2200FF47B1 /* MasterViewController.h */,
 				51E68A8A19B6AA2200FF47B1 /* MasterViewController.m */,
 			);
-			name = users;
+			name = favourits;
 			sourceTree = "<group>";
 		};
 		51E68AB419B6ABDC00FF47B1 /* repositories */ = {
 			isa = PBXGroup;
 			children = (
+				51E68AB219B6ABC900FF47B1 /* detail */,
 				51E68AB519B6ACEE00FF47B1 /* RepositoriesTableViewController.h */,
 				51E68AB619B6ACEE00FF47B1 /* RepositoriesTableViewController.m */,
 			);
@@ -226,6 +304,10 @@
 		51E68B0219B6B5A100FF47B1 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				5169D9C219C053EC00CDEEAE /* APIKeys.h */,
+				5169D9B119C034D800CDEEAE /* UIConstants.h */,
+				5169D9B219C04C6100CDEEAE /* UserConfig.h */,
+				5169D9B319C04C6100CDEEAE /* UserConfig.m */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -295,8 +377,6 @@
 			mainGroup = 51E68A6319B6AA2200FF47B1;
 			productRefGroup = 51E68A6D19B6AA2200FF47B1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				51E68A6B19B6AA2200FF47B1 /* Travis */,
@@ -364,13 +444,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5169D9C619C0598A00CDEEAE /* GithubLoginViewController.m in Sources */,
+				5169D9B019BE927D00CDEEAE /* MenuTableViewController.m in Sources */,
 				51E68A8E19B6AA2200FF47B1 /* DetailViewController.m in Sources */,
+				5169D9B819C04F3F00CDEEAE /* SettingsTableViewController.m in Sources */,
+				5169D9C019C0512800CDEEAE /* MyTableViewController.m in Sources */,
 				51E68A8B19B6AA2200FF47B1 /* MasterViewController.m in Sources */,
 				51E68AB719B6ACEE00FF47B1 /* RepositoriesTableViewController.m in Sources */,
 				51E68A8219B6AA2200FF47B1 /* AppDelegate.m in Sources */,
 				51E68A7E19B6AA2200FF47B1 /* main.m in Sources */,
 				51E68A8819B6AA2200FF47B1 /* Travis.xcdatamodeld in Sources */,
 				51E68AAF19B6ABB500FF47B1 /* AddUserViewController.m in Sources */,
+				5169D9BD19C050B400CDEEAE /* RecentTableViewController.m in Sources */,
+				5169D9B419C04C6100CDEEAE /* UserConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

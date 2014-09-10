@@ -37,6 +37,7 @@ PODS:
   - libPusher/Core (1.5):
     - SocketRocket (= 0.3.1-beta2)
   - MBProgressHUD (0.9)
+  - PKRevealController (2.0.6)
   - SocketRocket (0.3.1-beta2)
   - TravisKit (1.0.1):
     - TravisKit/Log
@@ -48,8 +49,9 @@ PODS:
     - JSONModel
 
 DEPENDENCIES:
-  - AuthKit
+  - AuthKit (~> 0.4)
   - MBProgressHUD (~> 0.9)
+  - PKRevealController (~> 2.0)
   - TravisKit (~> 1.0)
 
 SPEC CHECKSUMS:
@@ -58,6 +60,7 @@ SPEC CHECKSUMS:
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
   libPusher: 583326327a72ab7cd0f38692f61f9061cf4be3d9
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  PKRevealController: 4f175a432ad868c806dce1ebb3fd8a35d228bdb5
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   TravisKit: 68d93f8f3a8108a7d3023994622f9427a4920c32
 

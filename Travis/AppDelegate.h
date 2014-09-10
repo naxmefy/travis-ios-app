@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PKRevealController.h"
+#import <AuthKit/AuthKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,7 +18,14 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) AKGitHubClient *githubClient;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+- (void)showFronView;
+- (void)showMenu;
+- (void)showSettings;
+- (void)showHome;
 
 @end

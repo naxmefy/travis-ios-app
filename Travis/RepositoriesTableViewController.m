@@ -8,6 +8,7 @@
 
 #import "RepositoriesTableViewController.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface RepositoriesTableViewController ()
 
@@ -29,7 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self.navigationController.navigationBar addGestureRecognizer:self.revealController.revealPanGestureRecognizer];
+    
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         [self loadData];

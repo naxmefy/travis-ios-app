@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <CoreData/CoreData.h>
 
+#import "AppDelegate.h"
 #import "AddUserViewController.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, AddUserDelegate>
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, AddUserDelegate, PKRevealing>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

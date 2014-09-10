@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -38,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar addGestureRecognizer:self.revealController.revealPanGestureRecognizer];
     [self configureView];
 }
 

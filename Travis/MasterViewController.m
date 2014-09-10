@@ -11,6 +11,7 @@
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (IBAction)showMenu:(id)sender;
 @end
 
 @implementation MasterViewController
@@ -24,7 +25,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    [self.navigationController.navigationBar addGestureRecognizer:self.revealController.revealPanGestureRecognizer];
 
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
@@ -205,6 +208,10 @@
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"name"] description];
+}
+
+- (IBAction)showMenu:(id)sender {
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] showMenu];
 }
 
 #pragma mark - AddUserDelegate
