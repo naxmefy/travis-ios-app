@@ -13,7 +13,7 @@
 		5169D9B819C04F3F00CDEEAE /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9B719C04F3F00CDEEAE /* SettingsTableViewController.m */; };
 		5169D9BD19C050B400CDEEAE /* RecentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9BC19C050B400CDEEAE /* RecentTableViewController.m */; };
 		5169D9C019C0512800CDEEAE /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9BF19C0512800CDEEAE /* MyTableViewController.m */; };
-		5169D9C619C0598A00CDEEAE /* GithubLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */; };
+		5169D9C919C0622B00CDEEAE /* GithubLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169D9C819C0622B00CDEEAE /* GithubLoginTableViewController.m */; };
 		51E68A7019B6AA2200FF47B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A6F19B6AA2200FF47B1 /* Foundation.framework */; };
 		51E68A7219B6AA2200FF47B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */; };
 		51E68A7419B6AA2200FF47B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E68A7319B6AA2200FF47B1 /* UIKit.framework */; };
@@ -60,8 +60,8 @@
 		5169D9BE19C0512800CDEEAE /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		5169D9BF19C0512800CDEEAE /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
 		5169D9C219C053EC00CDEEAE /* APIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
-		5169D9C419C0598A00CDEEAE /* GithubLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubLoginViewController.h; sourceTree = "<group>"; };
-		5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubLoginViewController.m; sourceTree = "<group>"; };
+		5169D9C719C0622B00CDEEAE /* GithubLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubLoginTableViewController.h; sourceTree = "<group>"; };
+		5169D9C819C0622B00CDEEAE /* GithubLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubLoginTableViewController.m; sourceTree = "<group>"; };
 		51E68A6C19B6AA2200FF47B1 /* Travis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E68A6F19B6AA2200FF47B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51E68A7119B6AA2200FF47B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,8 +169,8 @@
 		5169D9C319C0597400CDEEAE /* github */ = {
 			isa = PBXGroup;
 			children = (
-				5169D9C419C0598A00CDEEAE /* GithubLoginViewController.h */,
-				5169D9C519C0598A00CDEEAE /* GithubLoginViewController.m */,
+				5169D9C719C0622B00CDEEAE /* GithubLoginTableViewController.h */,
+				5169D9C819C0622B00CDEEAE /* GithubLoginTableViewController.m */,
 			);
 			name = github;
 			sourceTree = "<group>";
@@ -444,7 +444,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5169D9C619C0598A00CDEEAE /* GithubLoginViewController.m in Sources */,
 				5169D9B019BE927D00CDEEAE /* MenuTableViewController.m in Sources */,
 				51E68A8E19B6AA2200FF47B1 /* DetailViewController.m in Sources */,
 				5169D9B819C04F3F00CDEEAE /* SettingsTableViewController.m in Sources */,
@@ -456,6 +455,7 @@
 				51E68A8819B6AA2200FF47B1 /* Travis.xcdatamodeld in Sources */,
 				51E68AAF19B6ABB500FF47B1 /* AddUserViewController.m in Sources */,
 				5169D9BD19C050B400CDEEAE /* RecentTableViewController.m in Sources */,
+				5169D9C919C0622B00CDEEAE /* GithubLoginTableViewController.m in Sources */,
 				5169D9B419C04C6100CDEEAE /* UserConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

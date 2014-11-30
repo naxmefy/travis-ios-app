@@ -1,5 +1,5 @@
 //
-//  GithubLoginViewController.h
+//  GithubLoginTableViewController.h
 //  Travis
 //
 //  Created by Nax on 10.09.14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GithubLoginViewController : UIViewController
+@interface GithubLoginTableViewController : UITableViewController <UITextFieldDelegate>
 
 @end

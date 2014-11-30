@@ -16,6 +16,7 @@
 @interface AppDelegate()<PKRevealing> {
     bool menuOpen;
     bool friendsOpen;
+    bool travisRuns;
 }
 
 @property (nonatomic, strong) UIStoryboard *storyboard;
@@ -34,13 +35,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // UserConfig
+    self.config = [[UserConfig alloc] init];
     
     // Github Client
     self.githubClient = [[AKGitHubClient alloc] initWithClientID:GITHUB_CLIENT_ID
                                                     clientSecret:GITHUB_CLIENT_SECRET
                                                           scopes:@[ AKGitHubScopeUser, AKGitHubScopeRepo ]
                                                             note:@"Test"];
-    
+
+    // Travis
+    [self initTravis];
+
     // Storyboard
     self.storyboard = [UIStoryboard storyboardWithName:kIPhoneStoryboard
                                                 bundle: nil];
@@ -191,6 +197,47 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Travis
+- (BOOL)isUserLoggedIn {
+    return [self.config getGithubLogin];
+}
+- (BOOL)isTravisRunning {
+    return travisRuns;
+}
+
+- (void)initTravis {
+    if ([self.config getGithubLogin]) {
+        self.travisOpenSourceClient = [[TKClient alloc] initWithServer:TKOpenSourceServer];
+        self.travisPrivateClient = [[TKClient alloc] initWithServer:TKPrivateServer];
+
+        // Login OpenSource Client
+        [self.travisOpenSourceClient authenticateWithGitHubToken:[self.config getGithubToken]
+                                                         success:^{
+                                                             travisRuns = YES;
+                                                             NSLog(@"Travis OpenSource is authenticated.");
+                                                         }
+                                                         failure:^(NSError * error){
+                                                             NSLog(@"Travis OpenSource authentication failed");
+                                                             NSLog(@"Error: %@", error);
+                                                         }];
+        // Login Private Client
+        if ([self.config getTravisPrivate]) {
+            [self.travisPrivateClient authenticateWithGitHubToken:[self.config getGithubToken]
+                                                          success:^{
+                                                              NSLog(@"Travis Private is authenticated.");
+                                                          }
+                                                          failure:^(NSError * error){
+                                                              NSLog(@"Travis Private authentication failed");
+                                                              NSLog(@"Error: %@", error);
+                                                          }];
+        }
+    }
+}
+
+- (void)unloadTravis {
+    
 }
 
 #pragma mark - PKReveal Public Functions

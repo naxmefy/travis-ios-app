@@ -9,8 +9,14 @@
 #import "MyTableViewController.h"
 #import "AppDelegate.h"
 
-@interface MyTableViewController ()
+@interface MyTableViewController () {
+    UserConfig * config;
+    TKClient * publicClient;
+    NSArray * data;
+}
 - (IBAction)showMenu:(id)sender;
+- (void)showError: (NSError *)error;
+- (void)loadData;
 
 @end
 
@@ -29,6 +35,23 @@
 {
     [super viewDidLoad];
     [self.navigationController.navigationBar addGestureRecognizer:self.revealController.revealPanGestureRecognizer];
+    
+    
+    
+    config = [(AppDelegate *)[[UIApplication sharedApplication] delegate] config];
+    if (![config getGithubLogin]) {
+        [self performSegueWithIdentifier:@"showGithubLogin" sender:self];
+    }
+    publicClient = [(AppDelegate *)[[UIApplication sharedApplication] delegate] travisOpenSourceClient];
+    
+    [publicClient authenticateWithGitHubToken:[config getGithubToken]
+                                      success:^{
+                                          [self loadData];
+                                      }
+                                      failure:^(NSError * error){
+                                          [self showError:error];
+                                      }];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -47,13 +70,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [data count];
 }
 
 /*
@@ -118,5 +141,27 @@
 
 - (IBAction)showMenu:(id)sender {
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] showMenu];
+}
+
+- (void)showError:(NSError *)error {
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Travis API Error"
+                                                     message:error.localizedDescription
+                                                    delegate:self
+                                           cancelButtonTitle:@"Ok"
+                                           otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)loadData {
+    [publicClient recentRepositoriesWithSuccess:^(NSArray* repositories)
+     {
+         NSLog(@"%@", repositories);
+     }
+                                        failure:^(NSError* error)
+     {
+         // Handle error
+         NSLog(@"Error: %@", error);
+         [self showError:error];
+     }];
 }
 @end

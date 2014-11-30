@@ -9,9 +9,13 @@
 #import "SettingsTableViewController.h"
 #import "AppDelegate.h"
 
-@interface SettingsTableViewController ()
+@interface SettingsTableViewController () {
+    UserConfig * config;
+}
 @property (weak, nonatomic) IBOutlet UITableViewCell *githubCell;
+@property (weak, nonatomic) IBOutlet UISwitch *privateReposSwitch;
 - (IBAction)showMenu:(id)sender;
+- (IBAction)switchedStateOfPrivateReposLoader:(id)sender;
 
 @end
 
@@ -35,6 +39,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    config = [(AppDelegate *)[[UIApplication sharedApplication] delegate] config];
+    if ([config getGithubLogin]) {
+        self.githubCell.detailTextLabel.text = [config getGithubUsername];
+    }
+    
+    [self.privateReposSwitch setOn:[config getTravisPrivate] animated:YES];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,6 +123,15 @@
 }
 */
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell == self.githubCell) {
+        [self performSegueWithIdentifier:@"showGithubLogin" sender:self];
+    }
+    
+}
+
 /*
 #pragma mark - Navigation
 
@@ -119,5 +145,12 @@
 
 - (IBAction)showMenu:(id)sender {
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] showMenu];
+}
+
+- (IBAction)switchedStateOfPrivateReposLoader:(id)sender {
+    [config setTravisPrivate:self.privateReposSwitch.on];
+    if (self.privateReposSwitch.on) {
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] initTravis];
+    }
 }
 @end

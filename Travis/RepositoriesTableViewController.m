@@ -16,6 +16,8 @@
 @property(nonatomic, retain) NSArray *repoHolderNames;
 
 - (void)loadData;
+- (void)fetchData;
+- (IBAction)reloadData:(id)sender;
 @end
 
 @implementation RepositoriesTableViewController
@@ -33,14 +35,8 @@
     
     [self.navigationController.navigationBar addGestureRecognizer:self.revealController.revealPanGestureRecognizer];
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        [self loadData];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-    });
-
+    
+    [self loadData];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,7 +76,7 @@
 
     cell.textLabel.text = repoName;
 
-    NSString *formatForDetail = @"Build #%@ - %@";
+    NSString *formatForDetail = @"Build #%@ - %@ - %@";
     NSString *status = @"";
 
     if (repo[@"last_build_status"] == [NSNull null]) {
@@ -97,9 +93,18 @@
         }
     }
 
+    NSString *dateWhole = repo[@"last_build_finished_at"];
+    NSArray *dateParts = [dateWhole componentsSeparatedByString:@"T"];
+    NSString *date = dateParts[0];
+    NSRange r;
+    r.location = 0;
+    r.length = [dateParts[1] length]-1;
+    NSString* time = [dateParts[1] substringWithRange:r];
+
     cell.detailTextLabel.text = [NSString stringWithFormat:formatForDetail
             , [repo objectForKey:@"last_build_number"]
-            , status];
+            , status
+            , [NSString stringWithFormat:@"%@ %@", date, time]];
 
     return cell;
 }
@@ -155,6 +160,15 @@
 */
 
 - (void)loadData {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        [self fetchData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+}
+- (void)fetchData {
     NSString *baseUrlString = @"https://api.travis-ci.org/repos?member=%@";
     NSString *urlString = [NSString stringWithFormat:baseUrlString, self.username];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
@@ -189,6 +203,10 @@
     self.repoHolderNames = [[NSArray alloc] initWithArray:names];
     self.repoHolder = [[NSArray alloc] initWithArray:tmpRepoHolder];
     [self.tableView reloadData];
+}
+
+- (IBAction)reloadData:(id)sender {
+    [self loadData];
 }
 
 @end

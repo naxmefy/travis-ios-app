@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PKRevealController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 #import <AuthKit/AuthKit.h>
+#import "UserConfig.h"
+#import <TravisKit/TravisKit.h>
+
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,10 +23,18 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) UserConfig *config;
 @property (nonatomic, strong) AKGitHubClient *githubClient;
+@property (nonatomic, strong) TKClient *travisOpenSourceClient;
+@property (nonatomic, strong) TKClient *travisPrivateClient;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+- (BOOL)isUserLoggedIn;
+- (BOOL)isTravisRunning;
+- (void)initTravis;
+- (void)unloadTravis;
 
 - (void)showFronView;
 - (void)showMenu;
